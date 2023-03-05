@@ -29,14 +29,16 @@ class ViewController: UIViewController {
         view.addSubview(cyanView)
         
         NSLayoutConstraint.activate([
-            redView.widthAnchor.constraint(equalToConstant: 50),
+            redView.widthAnchor.constraint(equalToConstant: 150),
             redView.heightAnchor.constraint(equalToConstant: 30),
-            redView.centerYAnchor.constraint(equalTo: cyanView.centerYAnchor),
-            redView.leadingAnchor.constraint(equalTo: cyanView.trailingAnchor)
+//            redView.centerYAnchor.constraint(equalTo: cyanView.centerYAnchor),
+//            redView.leadingAnchor.constraint(equalTo: cyanView.trailingAnchor)
+            redView.bottomAnchor.constraint(equalTo: cyanView.topAnchor, constant: -20),
+            redView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         ])
         
         NSLayoutConstraint.activate([
-            cyanView.widthAnchor.constraint(equalToConstant: 50),
+            cyanView.widthAnchor.constraint(equalToConstant: 150),
             cyanView.heightAnchor.constraint(equalToConstant: 30),
             cyanView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             cyanView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
